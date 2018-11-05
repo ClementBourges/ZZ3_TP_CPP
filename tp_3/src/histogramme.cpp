@@ -3,6 +3,7 @@
 
 typedef Histogramme Histo;
 
+template <T>
 Histogramme::Histogramme(double a,double b, int t)
 {
   double pas=(b-a)/t;
@@ -10,13 +11,35 @@ Histogramme::Histogramme(double a,double b, int t)
   for(i=0; i<t;i++)
   {
     double abis=a+(i*pas);
-    std::cout<<"Dans la classe, borneinf="<<abis<<std::endl;
-    cla.push_back(Classe(abis,(b-(t-1)*pas+i*pas)));
+    //cla.push_back(Classe(abis,(b-(t-1)*pas+i*pas)));
+	cla.insert(Classe(abis,(b-(t-1)*pas+i*pas));
   }
 }
+
+
+template <T>
 const std::vector<Classe> & Histogramme::getClasses() const
 {
   return cla;
 }
 
-void Histogramme::ajouter(Echantillon e) const;
+template <T>
+void Histogramme::ajouter(Echantillon e)
+{
+
+	for(int i=0; i<e.getTaille(); i++)
+	{
+
+		Valeur v = e.getValeur(i);
+		Histogramme::classes_t::iterator it = cla.begin();
+		 while (it!=cla.end())
+		{
+			if(v.getNombre() >= it->getBorneInf() && v.getNombre() < it->getBorneSup())
+			{
+					int q = it->getQuantite();
+					it->setQuantite(q + 1);
+			}
+			  ++it;
+	 	}
+	}
+}
