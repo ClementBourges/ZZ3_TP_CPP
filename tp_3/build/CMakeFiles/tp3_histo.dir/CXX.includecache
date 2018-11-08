@@ -16,6 +16,12 @@ vector
 
 ../src/valeur.hpp
 
+/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/Echantillon.hpp
+valeur.hpp
+/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/valeur.hpp
+vector
+-
+
 /home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/classe.cpp
 classe.hpp
 -
@@ -41,6 +47,8 @@ classe.hpp
 /home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/classe.hpp
 iterator
 -
+Echantillon.hpp
+/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/Echantillon.hpp
 
 /home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/main_histo.cpp
 cstdlib
@@ -49,4 +57,6 @@ cstdlib
 /home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/valeur.cpp
 valeur.hpp
 -
+
+/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/valeur.hpp
 

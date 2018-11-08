@@ -8,9 +8,11 @@ CMakeFiles/tp3_test.dir/src/echantillon.cpp.o: ../src/echantillon.hpp
 CMakeFiles/tp3_test.dir/src/echantillon.cpp.o: ../src/valeur.hpp
 CMakeFiles/tp3_test.dir/src/echantillon.cpp.o: ../src/echantillon.cpp
 
+CMakeFiles/tp3_test.dir/src/histogramme.cpp.o: ../src/Echantillon.hpp
 CMakeFiles/tp3_test.dir/src/histogramme.cpp.o: ../src/classe.hpp
 CMakeFiles/tp3_test.dir/src/histogramme.cpp.o: ../src/histogramme.cpp
 CMakeFiles/tp3_test.dir/src/histogramme.cpp.o: ../src/histogramme.hpp
+CMakeFiles/tp3_test.dir/src/histogramme.cpp.o: ../src/valeur.hpp
 
 CMakeFiles/tp3_test.dir/src/valeur.cpp.o: ../src/valeur.hpp
 CMakeFiles/tp3_test.dir/src/valeur.cpp.o: ../src/valeur.cpp
@@ -18,8 +20,8 @@ CMakeFiles/tp3_test.dir/src/valeur.cpp.o: ../src/valeur.cpp
 CMakeFiles/tp3_test.dir/test/catch.cpp.o: ../test/catch.cpp
 CMakeFiles/tp3_test.dir/test/catch.cpp.o: ../test/catch.hpp
 
+CMakeFiles/tp3_test.dir/test/tp3_test.cpp.o: ../src/Echantillon.hpp
 CMakeFiles/tp3_test.dir/test/tp3_test.cpp.o: ../src/classe.hpp
-CMakeFiles/tp3_test.dir/test/tp3_test.cpp.o: ../src/echantillon.hpp
 CMakeFiles/tp3_test.dir/test/tp3_test.cpp.o: ../src/histogramme.hpp
 CMakeFiles/tp3_test.dir/test/tp3_test.cpp.o: ../src/valeur.hpp
 CMakeFiles/tp3_test.dir/test/tp3_test.cpp.o: ../test/catch.hpp

@@ -2,8 +2,7 @@
 #include <iostream>
 
 typedef Histogramme Histo;
-
-template <T>
+template<typename T >
 Histogramme::Histogramme(double a,double b, int t)
 {
   double pas=(b-a)/t;
@@ -11,19 +10,18 @@ Histogramme::Histogramme(double a,double b, int t)
   for(i=0; i<t;i++)
   {
     double abis=a+(i*pas);
-    //cla.push_back(Classe(abis,(b-(t-1)*pas+i*pas)));
-	cla.insert(Classe(abis,(b-(t-1)*pas+i*pas));
+    cla.push_back(Classe(abis,(b-(t-1)*pas+i*pas)));
+	//cla.insert(Classe(abis,(b-(t-1)*pas+i*pas));
   }
 }
 
-
-template <T>
+template<typename T >
 const std::vector<Classe> & Histogramme::getClasses() const
 {
   return cla;
 }
 
-template <T>
+template<typename T >
 void Histogramme::ajouter(Echantillon e)
 {
 

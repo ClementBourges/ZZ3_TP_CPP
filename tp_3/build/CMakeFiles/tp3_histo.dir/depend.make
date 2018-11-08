@@ -8,9 +8,11 @@ CMakeFiles/tp3_histo.dir/src/echantillon.cpp.o: ../src/echantillon.hpp
 CMakeFiles/tp3_histo.dir/src/echantillon.cpp.o: ../src/valeur.hpp
 CMakeFiles/tp3_histo.dir/src/echantillon.cpp.o: ../src/echantillon.cpp
 
+CMakeFiles/tp3_histo.dir/src/histogramme.cpp.o: ../src/Echantillon.hpp
 CMakeFiles/tp3_histo.dir/src/histogramme.cpp.o: ../src/classe.hpp
 CMakeFiles/tp3_histo.dir/src/histogramme.cpp.o: ../src/histogramme.cpp
 CMakeFiles/tp3_histo.dir/src/histogramme.cpp.o: ../src/histogramme.hpp
+CMakeFiles/tp3_histo.dir/src/histogramme.cpp.o: ../src/valeur.hpp
 
 CMakeFiles/tp3_histo.dir/src/main_histo.cpp.o: ../src/main_histo.cpp
 

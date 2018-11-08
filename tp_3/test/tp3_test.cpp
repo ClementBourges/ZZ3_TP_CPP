@@ -4,7 +4,7 @@
 #include <cmath>
 
 #include <histogramme.hpp>
-#include <echantillon.hpp>
+
 //#include <comparateur_quantite.hpp>
 
 typedef Histogramme Histo;
@@ -210,7 +210,7 @@ TEST_CASE ( "TP3_Histogramme::Echantillon" ) {
 }
 
 //----------------------------------------------------------------------------------------------- 14
-/*TEST_CASE ( "TP3_Histogramme::Generique" ) {
+TEST_CASE ( "TP3_Histogramme::Generique" ) {
  typedef Histogramme<> histo_t;
 
  histo_t h(5.0,15.0,5);
@@ -230,7 +230,7 @@ TEST_CASE ( "TP3_Histogramme::Echantillon" ) {
   ++it;
   ++i;
  }
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 15
 /*TEST_CASE ( "TP3_Histogramme::FoncteurGreater" ) {
