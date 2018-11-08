@@ -2,34 +2,59 @@
 #include "classe.hpp"
 #include <iterator>
 #include <iostream>
-#include "Echantillon.hpp"
-
-#define CONTAINER_TYPE	SET
+#include "echantillon.hpp"
+#include <set>
+#include <map>
+#include <comparateur_quantite.hpp>
 
 template<typename T = std::less<Classe> >
 class Histogramme
 {
-	private:
   public:
-#if CONTAINER_TYPE == VECTOR 
+/*
 std::vector<Classe> cla;
 	//std::set<Classe> cla;
     Histogramme(double a,double b, int t);
     typedef std::vector<Classe> classes_t;
     typedef std::vector<Classe>::const_iterator const_iterator;
     const std::vector<Classe> & getClasses() const;
-#elif CONTAINER_TYPE == SET
-	std::set<Classe, T > ensemble;
-	public:
+*/
 	typedef std::set<Classe > classes_t;
-	Histogramme(double low_b = 0, double upper_b = 0, unsigned classNb = 0);
-	const std::set<Classe, T > & getClasses()const{return ensemble;};
-#endif
-void ajouter(Echantillon e);
+	typedef std::multimap<Classe, Valeur,std::less<Classe>> valeurs_t;
+	typedef std::multimap<Classe, Valeur,std::less<Classe>>::iterator it_valeurs_t;
+
+	std::set<Classe, T > cla;
+	std::multimap<Classe, Valeur, std::less<Classe>> map;
+	Histogramme(double a,double b, int t);
+	Histogramme(Histogramme<std::greater<Classe>>& h);
+	const std::set<Classe, T > & getClasses()const{return cla;};
+	void ajouter(Echantillon e);
+	void ajouter(double d);
+	const std::multimap<Classe, Valeur,std::less<Classe>> & getValeurs();
+	std::pair<it_valeurs_t,it_valeurs_t> getValeurs(const Classe & c);
+
 
 };
 
+typedef std::multimap<Classe, Valeur,std::less<Classe>>::iterator it_valeurs_t;
+template<typename T >
+std::pair<it_valeurs_t,it_valeurs_t> Histogramme<T>::getValeurs(const Classe & c)
+{
+	return map.equal_range(c);
+}
 
+
+template<typename T >
+Histogramme<T>::Histogramme(Histogramme<std::greater<Classe>>& h)
+{
+	Histogramme::classes_t::iterator ith = h.getClasses().begin();
+	 while (ith!=h.getClasses().end())
+	{
+				Classe tmp_classe(*ith);
+				cla.insert(tmp_classe);
+				ith++;
+	}
+}
 
 template<typename T >
 Histogramme<T>::Histogramme(double a,double b, int t)
@@ -39,15 +64,9 @@ Histogramme<T>::Histogramme(double a,double b, int t)
   for(i=0; i<t;i++)
   {
     double abis=a+(i*pas);
-    cla.push_back(Classe(abis,(b-(t-1)*pas+i*pas)));
-	//cla.insert(Classe(abis,(b-(t-1)*pas+i*pas));
+    //cla.push_back(Classe(abis,(b-(t-1)*pas+i*pas)));
+		cla.insert(Classe(abis,(b-(t-1)*pas+i*pas)));
   }
-}
-
-template<typename T >
-const std::vector<Classe> & Histogramme<T>::getClasses() const
-{
-  return cla;
 }
 
 template<typename T >
@@ -63,10 +82,44 @@ void Histogramme<T>::ajouter(Echantillon e)
 		{
 			if(v.getNombre() >= it->getBorneInf() && v.getNombre() < it->getBorneSup())
 			{
-					int q = it->getQuantite();
-					it->setQuantite(q + 1);
+				Classe tmp_classe(*it);
+				tmp_classe.ajouter();
+				cla.erase(it);
+				cla.insert(tmp_classe);
+				it=cla.end();
 			}
+			else
+			{
 			  ++it;
+			}
 	 	}
 	}
+}
+
+template<typename T >
+void Histogramme<T>::ajouter(double d)
+{
+		Histogramme::classes_t::iterator it = cla.begin();
+		 while (it!=cla.end())
+		{
+			if(d >= it->getBorneInf() && d < it->getBorneSup())
+			{
+				map.insert(std::pair<Classe, Valeur>(*it, Valeur(d)));
+				Classe tmp_classe(*it);
+				tmp_classe.ajouter();
+				cla.erase(it);
+				cla.insert(tmp_classe);
+				it=cla.end();
+			}
+			else
+			{
+			  ++it;
+			}
+	 	}
+}
+
+template<typename T >
+const std::multimap<Classe, Valeur, std::less<Classe>>& Histogramme<T>::getValeurs()
+{
+	return map;
 }

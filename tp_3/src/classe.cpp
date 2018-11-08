@@ -1,5 +1,12 @@
 #include <classe.hpp>
 
+
+Classe::Classe()
+{
+  borneinf=0;
+  bornesup=0;
+  quantite=0;
+}
 Classe::Classe(double a, double b)
 {
   this->setBorneInf(a);

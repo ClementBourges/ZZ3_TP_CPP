@@ -1,3 +1,6 @@
+#ifndef CLASSE_HPP
+#define CLASSE_HPP
+
 class Classe
 {
 	private:
@@ -13,5 +16,11 @@ class Classe
     void setQuantite(int);
     void ajouter();
     Classe(double a, double b);
+		Classe();
+		bool operator<(Classe const &a)const{return (borneinf<a.borneinf);};
+		bool operator>(Classe const &a)const{return (borneinf>a.borneinf);};
+
 
 };
+
+#endif

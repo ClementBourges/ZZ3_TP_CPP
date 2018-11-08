@@ -6,12 +6,10 @@
 
 #IncludeRegexTransform: 
 
-../src/Echantillon.hpp
-valeur.hpp
-../src/valeur.hpp
-vector
--
+../src/classe.hpp
 
+../src/comparateur_quantite.hpp
+classe.hpp
 ../src/classe.hpp
 
 ../src/echantillon.hpp
@@ -29,58 +27,20 @@ iterator
 -
 iostream
 -
-Echantillon.hpp
-../src/Echantillon.hpp
+echantillon.hpp
+../src/echantillon.hpp
+set
+-
+map
+-
+comparateur_quantite.hpp
+-
 
 ../src/valeur.hpp
-
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/Echantillon.hpp
-valeur.hpp
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/valeur.hpp
-vector
+string
 -
 
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/classe.cpp
-classe.hpp
--
-
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/classe.hpp
-
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/echantillon.cpp
-echantillon.hpp
--
-stdexcept
--
-
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/histogramme.cpp
-histogramme.hpp
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/histogramme.hpp
-iostream
--
-
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/histogramme.hpp
-vector
--
-classe.hpp
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/classe.hpp
-iterator
--
-iostream
--
-Echantillon.hpp
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/Echantillon.hpp
-
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/valeur.cpp
-valeur.hpp
--
-
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/src/valeur.hpp
-
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/test/catch.cpp
-catch.hpp
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/test/catch.hpp
-
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/test/catch.hpp
+/root/ZZ3_TP_CPP/tp_3/test/catch.hpp
 TargetConditionals.h
 -
 iosfwd
@@ -328,7 +288,7 @@ string
 memory
 -
 Foundation/Foundation.h
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/test/Foundation/Foundation.h
+/root/ZZ3_TP_CPP/tp_3/test/Foundation/Foundation.h
 algorithm
 -
 random
@@ -508,13 +468,15 @@ algorithm
 cassert
 -
 
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/test/tp3_test.cpp
+/root/ZZ3_TP_CPP/tp_3/test/tp3_test.cpp
 catch.hpp
-/home/LOCAL.ISIMA.FR/clbourges1/MODL/tp_3/test/catch.hpp
+/root/ZZ3_TP_CPP/tp_3/test/catch.hpp
 iostream
 -
 cmath
 -
 histogramme.hpp
+-
+comparateur_quantite.hpp
 -
 

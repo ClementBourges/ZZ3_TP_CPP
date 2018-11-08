@@ -4,7 +4,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/tp3_test.dir/src/valeur.cpp.o"
   "CMakeFiles/tp3_test.dir/src/echantillon.cpp.o"
   "CMakeFiles/tp3_test.dir/src/classe.cpp.o"
-  "CMakeFiles/tp3_test.dir/src/histogramme.cpp.o"
   "tp3_test.pdb"
   "tp3_test"
 )
